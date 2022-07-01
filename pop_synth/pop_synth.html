@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Running a POSYDON population synthesis &mdash; posydon 0+untagged.1.gff4d0c2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Custom population synthesis" href="custom_flow.html" />
+    <link rel="prev" title="Running populations using POSYDON" href="POSYDON_populations.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> posydon
+          </a>
+              <div class="version">
+                0+untagged.1.gff4d0c2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data.html">Data Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">Application Programming Interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Binary Star Grids</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../run_mesa_grids/inifile.html">.ini file documentation for POSYDON GRIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../run_mesa_grids/fixed/fixed.html">Run a fixed MESA grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PSyGrid/PSyGrid.html">The PSyGrid Object</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Generating Populations</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="POSYDON_populations.html">Running populations using POSYDON</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running a POSYDON population synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_flow.html">Custom population synthesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SingleStar/SingleStar.html">The SingleStar object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BinaryStar/BinaryStar.html">The BinaryStar object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced_pop_options/custom_hooks.html">Evolutionary Hooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced_pop_options/debugging_binaries.html">Debugging Failed Binaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interpolation/IF-Interpolator/IFInterpolator.html">Initial-Final Interpolation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plotting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../visualization/plot1D/plot1D.html">1D plotting functionalities for POSYON GRIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visualization/plot2D/plot2D.html">2D plotting functionalities for POSYON GRIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visualization/VHD/VHD.html">Van den Heuvel diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interpolation/violinplot.html">Making the Violin Plot</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/licence.html">Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/attribution.html">Attribution</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">posydon</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Running a POSYDON population synthesis</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pop_synth/pop_synth.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="running-a-posydon-population-synthesis">
+<span id="pop-synth"></span><h1>Running a POSYDON population synthesis<a class="headerlink" href="#running-a-posydon-population-synthesis" title="Permalink to this headline"></a></h1>
+<p>NOTE: this is a temporary tutorial until we have a proper API</p>
+<p>This script list all customisable option of a POSYDON population synthesis run.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%writefile script.py
+from mpi4py import MPI
+from posydon.popsyn.binarypopulation import BinaryPopulation
+from posydon.binary_evol import SimulationProperties
+from posydon.binary_evol.flow_chart import flow_chart
+from posydon.binary_evol.MESA.step_mesa import CO_HeMS_step, MS_MS_step, CO_HMS_RLO_step
+from posydon.binary_evol.DT.step_detached import detached_step
+from posydon.binary_evol.CE.step_CEE import StepCEE
+from posydon.binary_evol.SN.step_SN import StepSN
+from posydon.binary_evol.DT.double_CO import DoubleCO
+from posydon.binary_evol.step_end import step_end
+from posydon.binary_evol.simulationproperties import StepNamesHooks
+​  ​
+# STEP CUSTOMISATION
+MESA_STEP = dict(
+    interpolation_path = None, # found by default
+    interpolation_filename = None, # found by default
+    interpolation_method = &#39;linear3c_kNN&#39;, # &#39;nearest_neighbour&#39; &#39;linear3c_kNN&#39; &#39;1NN_1NN&#39;
+    save_initial_conditions = True, # only for interpolation_method=&#39;nearest_neighbour&#39;
+    track_interpolation = False, # True False
+    stop_method = &#39;stop_at_max_time&#39;, # &#39;stop_at_end&#39; &#39;stop_at_max_time&#39; &#39;stop_at_condition&#39;
+    stop_star = &#39;star_1&#39;, # only for stop_method=&#39;stop_at_condition&#39; &#39;star_1&#39; &#39;star_2&#39;
+    stop_var_name = None, # only for stop_method=&#39;stop_at_condition&#39; str
+    stop_value = None, # only for stop_method=&#39;stop_at_condition&#39; float
+    stop_interpolate = True, # True False
+    verbose = False, # True False
+)
+​
+DETACHED_STEP = dict(
+    matching_method = &#39;minimize&#39;, #&#39;minimize&#39; &#39;root&#39;
+    do_wind_loss = True, # True False
+    do_tides = True,  # True False
+    do_gravitational_radiation = True,  # True False
+    do_magnetic_braking = True,  # True False
+    do_stellar_evolution_and_spin_from_winds = True,  # True False
+    RLO_orbit_at_orbit_with_same_am = False,  # True False
+    verbose = False,  # True False
+)
+​
+CE_STEP = dict(
+    prescription=&#39;alpha-lambda&#39;, # &#39;alpha-lambda&#39;
+    common_envelope_efficiency=1.0, # float in (0, inf)
+    common_envelope_option_for_lambda=&#39;lambda_from_grid_final_values&#39;, # (1) &#39;default_lambda&#39;, (2) &#39;lambda_from_grid_final_values&#39;,
+                                                  # (3) &#39;lambda_from_profile_gravitational&#39;,
+                                                  # (4) &#39;lambda_from_profile_gravitational_plus_internal&#39;,
+                                                  # (5) &#39;lambda_from_profile_gravitational_plus_internal_minus_recombination&#39;
+    common_envelope_lambda_default=0.5, # float in (0, inf) used only for option (1)
+    common_envelope_option_for_HG_star=&quot;optimistic&quot;, # &#39;optimistic&#39;, &#39;pessimistic&#39;
+    common_envelope_alpha_thermal=1.0, # float in (0, inf) used only for option for (4), (5)
+    core_definition_H_fraction=0.1, # 0.01, 0.1, 0.3
+    core_definition_He_fraction=0.1, # 0.1
+    CEE_tolerance_err=0.001, # float (0, inf)
+    common_envelope_option_after_succ_CEE = &#39;core_not_replaced_noMT&#39;, # &#39;core_not_replaced_noMT&#39; &#39;core_replaced_noMT&#39; &#39;core_not_replaced_stableMT&#39; &#39;core_not_replaced_windloss&#39;
+    verbose = False, # True False
+)
+​
+SN_STEP = dict(
+    mechanism=&#39;Patton&amp;Sukhbold20-engine&#39;, # &#39;direct&#39;, Fryer+12-rapid&#39;, &#39;Fryer+12-delayed&#39;, &#39;Sukhbold+16-engine&#39;, &#39;Patton&amp;Sukhbold20-engine&#39;
+    engine=&#39;N20&#39;, # &#39;N20&#39; for &#39;Sukhbold+16-engine&#39;, &#39;Patton&amp;Sukhbold20-engine&#39; or None for the others
+    PISN=&quot;Marchant+19&quot;, # None, &quot;Marchant+19&quot;
+    ECSN=&quot;Podsiadlowksi+04&quot;, # &quot;Tauris+15&quot;, &quot;Podsiadlowksi+04&quot;
+    max_neutrino_mass_loss=0.5, # float (0,inf)
+    kick=True, # True, False
+    kick_normalisation=&#39;one_over_mass&#39;, # &quot;one_minus_fallback&quot;, &quot;one_over_mass&quot;, &quot;NS_one_minus_fallback_BH_one&quot;, &quot;one&quot;, &quot;zero&quot;
+    sigma_kick_CCSN_NS=265.0, # float (0,inf)
+    sigma_kick_CCSN_BH=265.0, # float (0,inf)
+    sigma_kick_ECSN=20.0, # float (0,inf)
+    max_NS_mass=2.5,  # float (0,inf)
+    use_interp_values=True,  # True, False
+    use_profiles=True,  # True, False
+    use_core_masses=True,  # True, False
+    approx_at_he_depletion=True, # True, False
+    verbose = False,  # True False
+)
+​
+DCO_STEP = dict(
+    n_o_steps_interval = None,
+)
+​
+END_STEP = {}
+​
+# FLOW CHART CONFIGURATION
+sim_kwargs = dict(
+    flow = (flow_chart, {}),
+    step_HMS_HMS = (MS_MS_step, MESA_STEP),
+    step_CO_HeMS = (CO_HeMS_step, MESA_STEP),
+    step_CO_HMS_RLO = (CO_HMS_RLO_step, MESA_STEP),
+    step_detached = (detached_step, DETACHED_STEP),
+    step_CE = (StepCEE, CE_STEP),
+    step_SN = (StepSN, SN_STEP),
+    step_dco = (DoubleCO, DCO_STEP),
+    step_end = (step_end, END_STEP),
+    extra_hooks = [(StepNamesHooks, {})]
+)
+​
+sim_prop = SimulationProperties(**sim_kwargs)
+​
+# SIMULATION CONFIGURATION
+kwargs = dict(
+    file_path=&#39;./batches/&#39;,
+    optimize_ram=True,
+    ram_per_cpu=2., # limit ram usage at 2GB
+    #dump_rate=200, # limit batch size
+
+    number_of_binaries=100, # int
+    star_formation=&#39;constant&#39;, # &#39;constant&#39; &#39;burst&#39; &#39;custom_linear&#39; &#39;custom_log10&#39; &#39;custom_linear_histogram&#39; &#39;custom_log10_histogram&#39;
+    max_simulation_time=13.8e9, # float (0,inf)
+
+    primary_mass_scheme=&#39;Kroupa2001&#39;, # &#39;Salpeter&#39;, &#39;Kroupa1993&#39;, &#39;Kroupa2001&#39;
+    primary_mass_min=7, # float (0,130)
+    primary_mass_max=150., # float (0,130)
+    secondary_mass_scheme=&#39;flat_mass_ratio&#39;, # &#39;flat_mass_ratio&#39;, &#39;q=1&#39;
+    secondary_mass_min=0.35, # float (0,130)
+    secondary_mass_max=150., # float (0,130)
+    orbital_scheme = &#39;period&#39;, # &#39;separation&#39;, &#39;period&#39;
+    orbital_period_scheme = &#39;Sana+12_period_extended&#39;, # used only for orbital_scheme = &#39;period&#39;
+    orbital_period_min = 0.75, # float (0,inf)
+    orbital_period_max = 6000., # float (0,inf)
+    #orbital_separation_scheme=&#39;log_uniform&#39;, # used only for orbital_scheme = &#39;separation&#39;, &#39;log_uniform&#39;, &#39;log_normal&#39;
+    #orbital_separation_min=5., # float (0,inf)
+    #orbital_separation_max=1e5, # float (0,inf)
+    #log_orbital_separation_mean=None, # float (0,inf) used only for orbital_separation_scheme =&#39;log_normal&#39;
+    #log_orbital_separation_sigma=None, # float (0,inf) used only for orbital_separation_scheme =&#39;log_normal&#39;
+    eccentricity_sche=&#39;zero&#39;, # &#39;zero&#39; &#39;thermal&#39; &#39;uniform&#39;
+
+    # IMPORT CUSTOM HOOKS
+    extra_columns=[&#39;step_names&#39;], # &#39;step_times&#39; with from posydon.binary_evol.simulationproperties import TimingHooks
+
+    # LIST BINARY PROPERTIES TO SAVE
+    only_select_columns=[
+                        &#39;state&#39;,
+                        &#39;event&#39;,
+                        &#39;time&#39;,
+                        #&#39;separation&#39;,
+                        &#39;orbital_period&#39;,
+                        &#39;eccentricity&#39;,
+                        #&#39;V_sys&#39;,
+                        #&#39;rl_relative_overflow_1&#39;,
+                        #&#39;rl_relative_overflow_2&#39;,
+                        &#39;lg_mtransfer_rate&#39;,
+                        #&#39;mass_transfer_case&#39;,
+                        #&#39;trap_radius&#39;,
+                        #&#39;acc_radius&#39;,
+                        #&#39;t_sync_rad_1&#39;,
+                        #&#39;t_sync_conv_1&#39;,
+                        #&#39;t_sync_rad_2&#39;,
+                        #&#39;t_sync_conv_2&#39;,
+                        #&#39;nearest_neighbour_distance&#39;,
+                        ],
+
+    # LIST STAR PROPERTIES TO SAVE
+    include_S1=True , # True, False
+    S1_kwargs=dict(only_select_columns=[
+                                        &#39;state&#39;,
+                                        #&#39;metallicity&#39;,
+                                        &#39;mass&#39;,
+                                        &#39;log_R&#39;,
+                                        &#39;log_L&#39;,
+                                        &#39;lg_mdot&#39;,
+                                        #&#39;lg_system_mdot&#39;,
+                                        #&#39;lg_wind_mdot&#39;,
+                                        &#39;he_core_mass&#39;,
+                                        &#39;he_core_radius&#39;,
+                                        #&#39;c_core_mass&#39;,
+                                        #&#39;c_core_radius&#39;,
+                                        #&#39;o_core_mass&#39;,
+                                        #&#39;o_core_radius&#39;,
+                                        &#39;co_core_mass&#39;,
+                                        &#39;co_core_radius&#39;,
+                                        &#39;center_h1&#39;,
+                                        &#39;center_he4&#39;,
+                                        #&#39;center_c12&#39;,
+                                        #&#39;center_n14&#39;,
+                                        #&#39;center_o16&#39;,
+                                        &#39;surface_h1&#39;,
+                                        &#39;surface_he4&#39;,
+                                        #&#39;surface_c12&#39;,
+                                        #&#39;surface_n14&#39;,
+                                        #&#39;surface_o16&#39;,
+                                        #&#39;log_LH&#39;,
+                                        #&#39;log_LHe&#39;,
+                                        #&#39;log_LZ&#39;,
+                                        #&#39;log_Lnuc&#39;,
+                                        #&#39;c12_c12&#39;,
+                                        #&#39;center_gamma&#39;,
+                                        #&#39;avg_c_in_c_core&#39;,
+                                        #&#39;surf_avg_omega&#39;,
+                                        &#39;surf_avg_omega_div_omega_crit&#39;,
+                                        #&#39;total_moment_of_inertia&#39;,
+                                        #&#39;log_total_angular_momentum&#39;,
+                                        &#39;spin&#39;,
+                                        #&#39;conv_env_top_mass&#39;,
+                                        #&#39;conv_env_bot_mass&#39;,
+                                        #&#39;conv_env_top_radius&#39;,
+                                        #&#39;conv_env_bot_radius&#39;,
+                                        #&#39;conv_env_turnover_time_g&#39;,
+                                        #&#39;conv_env_turnover_time_l_b&#39;,
+                                        #&#39;conv_env_turnover_time_l_t&#39;,
+                                        #&#39;envelope_binding_energy&#39;,
+                                        #&#39;mass_conv_reg_fortides&#39;,
+                                        #&#39;thickness_conv_reg_fortides&#39;,
+                                        #&#39;radius_conv_reg_fortides&#39;,
+                                        #&#39;lambda_CE_1cent&#39;,
+                                        #&#39;lambda_CE_10cent&#39;,
+                                        #&#39;lambda_CE_30cent&#39;,
+                                        #&#39;lambda_CE_pure_He_star_10cent&#39;,
+                                        #&#39;profile&#39;,
+                                        ],
+                   scalar_names=[&#39;natal_kick_array&#39;,
+                                 &#39;SN_type&#39;,
+                                 #&#39;f_fb&#39;,
+                                 #&#39;spin_orbit_tilt&#39;,
+                                 #&#39;spin_vector&#39;
+                                ]),
+
+    # LIST STAR PROPERTIES TO SAVE
+    include_S2=True, # True, False
+    S2_kwargs=dict(only_select_columns=[
+                                        &#39;state&#39;,
+                                        #&#39;metallicity&#39;,
+                                        &#39;mass&#39;,
+                                        &#39;log_R&#39;,
+                                        &#39;log_L&#39;,
+                                        &#39;lg_mdot&#39;,
+                                        #&#39;lg_system_mdot&#39;,
+                                        #&#39;lg_wind_mdot&#39;,
+                                        &#39;he_core_mass&#39;,
+                                        &#39;he_core_radius&#39;,
+                                        #&#39;c_core_mass&#39;,
+                                        #&#39;c_core_radius&#39;,
+                                        #&#39;o_core_mass&#39;,
+                                        #&#39;o_core_radius&#39;,
+                                        &#39;co_core_mass&#39;,
+                                        &#39;co_core_radius&#39;,
+                                        &#39;center_h1&#39;,
+                                        &#39;center_he4&#39;,
+                                        #&#39;center_c12&#39;,
+                                        #&#39;center_n14&#39;,
+                                        #&#39;center_o16&#39;,
+                                        &#39;surface_h1&#39;,
+                                        &#39;surface_he4&#39;,
+                                        #&#39;surface_c12&#39;,
+                                        #&#39;surface_n14&#39;,
+                                        #&#39;surface_o16&#39;,
+                                        #&#39;log_LH&#39;,
+                                        #&#39;log_LHe&#39;,
+                                        #&#39;log_LZ&#39;,
+                                        #&#39;log_Lnuc&#39;,
+                                        #&#39;c12_c12&#39;,
+                                        #&#39;center_gamma&#39;,
+                                        #&#39;avg_c_in_c_core&#39;,
+                                        #&#39;surf_avg_omega&#39;,
+                                        &#39;surf_avg_omega_div_omega_crit&#39;,
+                                        #&#39;total_moment_of_inertia&#39;,
+                                        #&#39;log_total_angular_momentum&#39;,
+                                        &#39;spin&#39;,
+                                        #&#39;conv_env_top_mass&#39;,
+                                        #&#39;conv_env_bot_mass&#39;,
+                                        #&#39;conv_env_top_radius&#39;,
+                                        #&#39;conv_env_bot_radius&#39;,
+                                        #&#39;conv_env_turnover_time_g&#39;,
+                                        #&#39;conv_env_turnover_time_l_b&#39;,
+                                        #&#39;conv_env_turnover_time_l_t&#39;,
+                                        #&#39;envelope_binding_energy&#39;,
+                                        #&#39;mass_conv_reg_fortides&#39;,
+                                        #&#39;thickness_conv_reg_fortides&#39;,
+                                        #&#39;radius_conv_reg_fortides&#39;,
+                                        #&#39;lambda_CE_1cent&#39;,
+                                        #&#39;lambda_CE_10cent&#39;,
+                                        #&#39;lambda_CE_30cent&#39;,
+                                        #&#39;lambda_CE_pure_He_star_10cent&#39;,
+                                        #&#39;profile&#39;,
+                                        ],
+                   scalar_names=[&#39;natal_kick_array&#39;,
+                                 &#39;SN_type&#39;,
+                                 #&#39;f_fb&#39;,
+                                 #&#39;spin_orbit_tilt&#39;,
+                                 #&#39;spin_vector&#39;
+                                ]),
+)
+​
+​
+def run_simulation(sim_prop, kwargs, file=None, indicies=None, use_MPI=False):
+
+    if not use_MPI:
+        # create binaries
+        pop = BinaryPopulation(entropy=None,
+                               population_properties=sim_prop,
+                               file_name=file,
+                               **kwargs)
+    else:
+        comm = MPI.COMM_WORLD
+        rank = comm.Get_rank()
+        size = comm.Get_size()
+
+        # create binaries
+        pop = BinaryPopulation(entropy=None,
+                                   population_properties=sim_prop,
+                                   file_name=file,
+                                   comm=comm,
+                                   **kwargs)
+        sim_prop.load_steps(verbose=True)
+
+    # evolve binaries
+    if file is not None:
+        from_hdf = True
+    else:
+        from_hdf = False
+    pop.evolve(breakdown_to_df=False, from_hdf=from_hdf, indicies=indicies, tqdm=True)
+​
+    # save binaries
+    pop.save(&#39;./population.h5&#39;, **kwargs)
+
+    return pop
+
+if __name__ == &#39;__main__&#39; :
+    pop = run_simulation(sim_prop, kwargs, use_MPI=False)
+</pre></div>
+</div>
+<p>If you want to run the script on a HPC cluster with MPI, you can do so
+by setting <code class="docutils literal notranslate"><span class="pre">use_MPI=True</span></code> in the above script and runnning the following
+Slurm magic command.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%sbatch
+#!/bin/bash
+#SBATCH --mail-user=my_email
+#SBATCH --job-name=pop-syn
+#SBATCH --output=log.out
+#SBATCH --error=log.err
+#SBATCH --partition=debug-cpu
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=2
+#SBATCH --mem-per-cpu=8G
+#SBATCH --time=00:15:00
+
+mpiexec -n ${SLURM_NTASKS} python script.py
+</pre></div>
+</div>
+<p>Notice that the <code class="docutils literal notranslate"><span class="pre">run_simulation</span></code> method allows to reevolve any binary, e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="n">run_simulation</span><span class="p">(</span><span class="n">sim_prop</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="s1">&#39;./population.h5&#39;</span><span class="p">,</span> <span class="n">indicies</span><span class="o">=</span><span class="p">[</span><span class="mi">1334</span><span class="p">],</span> <span class="n">use_MPI</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>if the variable <code class="docutils literal notranslate"><span class="pre">indicies</span></code> is not specified, all binaries will be rerun.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="POSYDON_populations.html" class="btn btn-neutral float-left" title="Running populations using POSYDON" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="custom_flow.html" class="btn btn-neutral float-right" title="Custom population synthesis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Tassos Fragos.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
