@@ -15,7 +15,17 @@ jobs:
         python-version: [3.7]
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: clone submodule
+      uses: actions/checkout@v2
+      with:
+        repository: POSYDON-code/POSYDON-UNIT-TESTS
+        path: posydon/tests/data/POSYDON-UNIT-TESTS
+        persist-credentials: true
+        lfs: true
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
