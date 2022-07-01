@@ -1,9 +1,10 @@
 name: Website Deploy
 
 on:
-  push:
+  - push:
     branches:
       - development
+  - pull_request
 
 jobs:
   build:
@@ -38,7 +39,6 @@ jobs:
         sudo apt-get install gfortran swig libhdf5-serial-dev libmpich-dev
         python -m pip install coverage cpp-coveralls flake8 pytest
         python -m pip install .[doc]
-        python -m pip install .[ml]
 
     - name: Make dependencies
       env:
