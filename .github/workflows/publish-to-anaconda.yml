@@ -9,10 +9,16 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
     - name: publish-to-conda
-      uses: fcakyon/conda-publish-action@v1.3
+      uses: paskino/conda-package-publish-action@master
+
+      uses: amauryval/publish_conda_package_action@2.0.3
       with:
-        subdir: 'conda'
-        anacondatoken: ${{ secrets.ANACONDA_TOKEN }}
-        platforms: 'linux'
+        CondaDir: 'conda'
+        Platforms: 'noarch'
+        CondaUsername: posydon
+        CondaPassword: ${{ secrets.ANACONDA_TOKEN }}
