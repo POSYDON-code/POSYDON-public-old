@@ -3,8 +3,7 @@ name: Website Deploy
 on:
   push:
     branches:
-      - development
-  pull_request:
+      - main
 
 jobs:
   build:
